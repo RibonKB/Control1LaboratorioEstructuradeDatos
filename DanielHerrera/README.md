@@ -1,8 +1,6 @@
-# Control1-EstructuraDeDatos
+# Revisión:
 
-  Control Estructura de Datos :
-  
-  - heap.c
-  - main.c
-  - heap.h
-  
+1. Se asume que las funciones cumplen con crear un árbol Heap. (25%)
+2. Correcto (25%)
+3. No Completado. (0%)
+4. No Completado (0%)
