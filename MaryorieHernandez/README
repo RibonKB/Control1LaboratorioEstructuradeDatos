@@ -1,0 +1,5 @@
+Para compilar debe escribir en consola la siguiente instrucción
+	gcc heap.c main.c -o exe
+
+Su ejecución es
+	./exe
