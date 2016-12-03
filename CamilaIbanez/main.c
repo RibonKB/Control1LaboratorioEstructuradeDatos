@@ -9,12 +9,27 @@ int getRandom(int max) {
 	return rand() % max; 
 }
 
-int main()
-{  
+/* 
+función para la pregunta 3, guarda todos los elementos del heap en un arreglo, luego llama a la función eliminar del archivo 
+heap.c donde elimina todos los elementos del heap, luego retorna el arreglo
+*/
+int int eliminarElementos(Heap *heap){
+ 	int arreglo[heap->tamano]; // nuevo para el arreglo al eliminar elementos del heap
+	  for(i = 0; i < heap->tamano; i++){
+	  	arreglo[i]= heap->arr[i];
+	  }
+	  eliminarEnHeap(heap);
+	  return arreglo;
+}
+
+
+int main(){  
+
     Heap *heap;
     heap = creaHeap();
  	int op=0;
  	int elemento=0;
+
  	do{
  	 printf("\nEjercicio 1 ");
  	 printf("\nEjercicio 2 ");
@@ -33,8 +48,8 @@ int main()
 	    	 insertarEnHeap(heap,elemento);
 	            printf("\nHeap:");
                 int i;
-                for(i = 0; i < heap->tamano; i++){
-                    printf(" %i ", heap->arr[i].prioridad);
+                for(i = 0; i < heap->tamano; i++){  
+                    printf(" %i ", heap->arr[i]);
                 }
                 printf("\n\n");
 	    	break;
@@ -48,9 +63,12 @@ int main()
 	    }   
 	 	op=0;
 	 }else if(op == 2){
-	  	insertarEnHeap(heap,getRandom(8000));
+	 	for(i = 0;i < heap->tamano;i++){// para armar el arbol random
+	  		insertarEnHeap(heap,getRandom(8000));
+	  	}
 	 	op=0;
 	 }else if(op == 3){
+		eliminarElementos(heap); (// llama a la función eliminar elementos 	
 	 	op=0;
 	 }else{
 		printf("\nOpción incorrecta !! intente nuevamente \n"); 

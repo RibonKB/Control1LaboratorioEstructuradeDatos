@@ -1,5 +1,4 @@
-
 typedef struct heap {
-    Paciente arr[TAM];
+    Elementos arr[TAM];
     int tamano;
 }Heap;

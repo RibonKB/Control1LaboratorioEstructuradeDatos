@@ -6,7 +6,7 @@ int flor(double num){
 
 /**
     Funcion que crea un Max heap.
-    Reserva la memoria para todo el arreglo del heap de acuerdo al tamaño maximo definido en la estructura
+    Reserva la memoria para todo el arreglo del heap de acuerdo al tamaÃ±o maximo definido en la estructura
     e inicializa todos los nodos con prioridad -1
 */
 Heap *creaHeap() {
@@ -75,4 +75,3 @@ void *eliminarEnHeap(Heap *heap){
         rehaceHeap(heap,0);
     }
 }
-
